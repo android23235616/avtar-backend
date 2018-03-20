@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Google Powered Site Search | Tutorialzine Demo</title>
+
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}" />
+<script type="text/javascript"  src="{{url_for('static',filename='js/details.js')}}"></script>
+</head>
+
+<body>
+
+
+
+<div id="page">
+
+    <h1 id="details">Advanced Vehicle Tracking And Agile Recovery</h1>
+    
+    <form id="searchForm" method="get" action="/index2">
+		<fieldset>
+        
+           	<input id="s" type="text" name="s" />
+            
+            <input type="button" onclick="process()" value="Submit" id="submitButton" />
+           
+           
+            
+        </fieldset>
+		<input type="submit" id="submitButton2" value="Track" class="credit"  placeholder="Chesis Number"/>
+    </form>
+
+    <div id="resultsDiv"></div>
+    
+</div>
+
+<!-- It would be great if you leave the link back to the tutorial. Thanks! -->
+
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

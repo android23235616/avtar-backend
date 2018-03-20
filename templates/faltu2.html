@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 700px;
+        width: 100%;
+       }
+    </style>
+	<script type="text/javascript"  src="{{url_for('static',filename='js/main_real.js')}}"></script>
+
+
+<script type="text/javascript" src="{{url_for('static',filename='js/my_thread_real.js')}}"></script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqT_1BtmlMw09HypO7L0EFRIIkBPtlz2Q&callback=initMap">
+    </script>
+	
+	
+
+
+<input type="text" id="chesis"/>
+
+<br>
+
+<button onclick="process()">Submit</button>
+
+<div id="display"> </div>
+
+
+<br>
+
+Name: <div id="name"></div><br>
+Address: <div id="add"></div><br>
+Mobile: <div id="mobile"></div><br>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+
+<title>SOS</title>
+
+<style>
+
+th {
+    white-space: normal;
+}
+
+table{
+	table-layout:fixed;
+}
+
+td{
+	overflow:hidden;
+}
+
+</style>
+
+</head>
+
+<body>
+<script type="text/javascript" src="{{url_for('static',filename='js/sos.js')}}"></script>
+
+
+
+<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Chesis</th>
+					<th>Said</th>
+					<th>Gender</th>
+					<th>button</th>
+					<th>SORT</th>
+				</tr>
+			</thead>
+			<form action="/index2" method="get">
+			<tbody id="display">
+			</tbody>
+			
+			</form>
+		</table>
+
+
+
+</body>
+
+</html>

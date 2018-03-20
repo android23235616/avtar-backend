@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div id="map" style="width:100%;height:30%"></div>
+
+<script type="text/javascript"  src="{{url_for('static',filename='main.js')}}"></script>
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFvgT4L2ZFxtq7eUPdadk2b3LZldZTB80&callback=myMap"></script>
+
+<script type="text/javascript" src="{{url_for('static',filename='my_thread.js')}}"></script>
+
+lat: <input type="number" name="lat" id="lat"><br>
+
+
+lng: <input type="number" name="lng" id="lng"><br>
+
+<button onclick="startThread()">Start thread</button>
+
+<br>
+
+<div id="display"> </div>
+</body>
+</html>

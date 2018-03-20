@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Page</title>
+	</head>
+	<body id="body">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Chesis</th>
+					<th>Said</th>
+					<th>Gender</th>
+					<th>button</th>
+				</tr>
+			</thead>
+			<tbody id="display">
+			</tbody>
+		</table>
+		
+	</body>
+</html>
+
+<script>
+window.load = myFunction
+
+function myFunction(){
+	var xhttp = new XMLHttpRequest();
+
+	xhttp.onreadystateexchange = function(){
+		console.log(this.responseText);
+
+		var text = '';
+
+		console.log(this.responseText);
+		
+		var mainArr = JSON.parse(this.responseText);
+
+		for (var i=0; i<mainArr.length; i++){
+			text = text + '<tr><th>' + mainArr[i].name + '</th> <th>' + mainArr[i].chesis + '</th> <th>' + mainArr[i].said + '</th><th> ' + mainArr[i].gender + '</th><th> <form action="" method="get"> <input type="hidden" name="name" value="' + mainArr[i].name + '"/><input type="hidden" name="chesis" value="' + mainArr[i].chesis + '" /> <input type="hidden" name="said" value="' +mainArr[i].said + '" /> <input type="hidden" name="gender" value="' + mainArr[i].gender + '"/> <input type="submit" name="submit" value="submit"/> </form></th> </tr>';
+		}
+
+		document.getElementById('display').innerHTML = text;
+
+	};
+
+	xhttp.open("GET", 'http://android23235616.pythonanywhere.com/emergency', true);
+	xhttp.send();
+}
+</script>

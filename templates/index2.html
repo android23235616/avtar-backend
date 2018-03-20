@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 1000px;
+        width: 100%;
+		
+       }
+	   
+	   body{
+		margin:0;
+		margin-left:0px;
+	   }
+	  
+    </style>
+	<script type="text/javascript"  src="{{url_for('static',filename='js/map_detail.js')}}"></script>
+
+
+
+  </head>
+  <body>
+    
+    <div id="map" ></div>
+    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqT_1BtmlMw09HypO7L0EFRIIkBPtlz2Q">
+    </script>
+	
+	
+
+
+<input type="text" id="chesis" value="{{chesis}}" style="opacity:0;"/>
+
+
+
+<div id="display" style="opacity:0;"> </div>
+
+<div id="name" style="opacity:0;"></div><br>
+<div id="add" style="opacity:0;"></div><br>
+<div id="mobile" style="opacity:0;"></div><br>
+
+  </body>
+</html>
